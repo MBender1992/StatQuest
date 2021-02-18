@@ -224,8 +224,10 @@ ll.proposed <- logistic$deviance/-2
 ## McFadden's Pseudo R^2 = [ LL(Null) - LL(Proposed) ] / LL(Null)
 (ll.null - ll.proposed) / ll.null
 
+
 ## The p-value for the R^2
 1 - pchisq(2*(ll.proposed - ll.null), df=(length(logistic$coefficients)-1))
+
 
 ## now we can plot the data
 predicted.data <- data.frame(
